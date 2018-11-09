@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    username: root
+    password: 802060617
+    url: jdbc:mysql://127.0.0.1:3306/workspace
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: userService
+
+mybatis:
+  typeAliasesPackage: com.thinkive.workspace.userservice.bean
+  mapperLocations: com.thinkive.workspace.userservice.Mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8796/eureka
+
+server:
+  port: 8083
+
